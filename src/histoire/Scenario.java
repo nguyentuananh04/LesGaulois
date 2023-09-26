@@ -1,25 +1,31 @@
 package histoire;
 
-import java.util.Iterator;
 
 import personnages.Gaulois;
 import personnages.Romain;
+import personnages.Druide;
 
 public class Scenario {
 
 	public static void main(String[] args) {
-		Gaulois asterix;
+		Gaulois asterix, obelix;
 		Romain minus;
+		Druide panoramix;
 		
-		asterix = new Gaulois("AstÃ©rix", 8);
+		asterix = new Gaulois("Asterix", 8);
 		minus = new Romain("Minus", 6);
+		obelix = new Gaulois("Obélix", 25);
 		
-		asterix.parler("Bonjour Ã  tous !");
+		panoramix = new Druide("Panoramix", 5, 10);
+		panoramix.parler("Je vais aller préparer une petite potion...");
+		panoramix.preparerPotion();
+		panoramix.booster(obelix);
+		obelix.parler("Par Bélénos, ce n'est pas juste !");
+		panoramix.booster(asterix);
+		asterix.boirePotion(panoramix.getForcePotion());
+		asterix.parler("Bonjour");
 		minus.parler("UN GAU... UN GAUGAU...");
-		
-		for (int i = 0; i < 3; i++) {
-			asterix.frapper(minus);
-		}
+		asterix.frapper(minus);
 	}
 
 }
