@@ -1,0 +1,70 @@
+package personnages;
+
+import java.util.Iterator;
+
+public class Village {
+	private String nom;
+	private Chef chef;
+	private Gaulois[] villageois;
+	private int nbVillageois = 0;
+	private int nbVillageoisMaximum;
+	
+	public Village(String nom, Chef chef, int nbVillageoisMaximum) {
+		this.nom = nom;
+		this.chef = chef;
+		
+		villageois = new Gaulois[nbVillageoisMaximum];
+	}
+	
+	public void ajouterHabitant(Gaulois gaulois) {
+		if (nbVillageois < nbVillageoisMaximum) {
+			villageois[nbVillageois] = new Gaulois(gaulois.getNom(), gaulois.getForce());
+			nbVillageois++;
+		}
+	}
+	
+	public Gaulois trouverHabitant(int nbVillageoisARecuperer) {
+		return villageois[nbVillageoisARecuperer];
+	}
+	
+	public String getNom() {
+		return nom;
+	}
+	
+	public void setChef(Chef chef) {
+		this.chef = chef;
+	}
+	
+	public void afficherVillageois() {
+		System.out.println("Dans village du chef " + chef.getNom() + " vivent les légendaires gaulois:");
+		for (int i = 0; i < villageois.length; i++) {
+			System.out.println("- " + villageois);
+		}
+	}
+	
+	public static void main(String[] args) {
+		Village village = new Village("Village des irréductibles", null, 30);
+		/* 
+		 * Gaulois gaulois = village.trouverHabitant(30);
+		 * parce qu'on a pas encore ajouter des habitants au village, 
+		 * alors il ne peut pas afficher le gaulois de l'indice 30 
+		 */
+		
+		Chef abraracourcix = new Chef("Abraracourcix", 6, 0, village);
+		village.setChef(abraracourcix);
+		village.ajouterHabitant(null);
+		Gaulois asterix = new Gaulois("Astérix", 8);
+		village.ajouterHabitant(asterix);
+		/*
+		Gaulois gaulois = village.trouverHabitant(1);
+		System.out.println(gaulois);
+		Le chef n'est pas toujours un habitant du village
+		Asterix est village[0], on peut pas recuperer village[1]
+		*/
+		
+		Gaulois obelix = new Gaulois("Obélix", 25);
+		village.ajouterHabitant(obelix);
+		
+		village.afficherVillageois();
+	}
+}

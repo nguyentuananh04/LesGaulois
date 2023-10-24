@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\Toulouse_France\UPS\2023-2024\ILU1\POO\workspace\.metadata\.plugins\org.eclipse.jdt.core
+1527552513.index
+2515568576.index
+1865797976.index
