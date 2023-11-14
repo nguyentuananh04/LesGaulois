@@ -1,7 +1,5 @@
 
-U	java:S106"+Replace this use of System.out by a logger.(·ÑÑ¬H@RMAJORZ
-CODE_SMELL
-J
-java:S2119$"Save and re-use this "Random".(ø ®ÁûÿÿÿÿHARCRITICALZBUG
-e
-java:S49732"<Strings and Boxed types should be compared using "equals()".(Õ¦ßüÿÿÿÿH=RMAJORZBUG
+f
+java:S49732"<Strings and Boxed types should be compared using "equals()".(Õ¦ßüÿÿÿÿH‘RMAJORZBUG
+K
+java:S2119$"Save and re-use this "Random".(ø ®ÁûÿÿÿÿH”RCRITICALZBUG

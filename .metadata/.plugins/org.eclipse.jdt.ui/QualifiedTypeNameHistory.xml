@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Void"/>
     <fullyQualifiedTypeName name="personnages.Village"/>
     <fullyQualifiedTypeName name="personnages.Chef"/>
     <fullyQualifiedTypeName name="personnages.Gaulois"/>
@@ -8,4 +7,10 @@
     <fullyQualifiedTypeName name="personnages.Romain"/>
     <fullyQualifiedTypeName name="personnages.Equipment"/>
     <fullyQualifiedTypeName name="personnages.Equipement"/>
+    <fullyQualifiedTypeName name="java.lang.Void"/>
+    <fullyQualifiedTypeName name="personnages.humain"/>
+    <fullyQualifiedTypeName name="personnages.Humain"/>
+    <fullyQualifiedTypeName name="histoire.Commercant"/>
+    <fullyQualifiedTypeName name="org.ratcm.CoffeeMakerScenarios"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
